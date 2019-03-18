@@ -1,0 +1,97 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-12-17T12:10:36.117Z",
+    "end": "2018-12-17T12:10:36.193Z",
+    "duration": 76,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "cc9174a4-827a-4048-bc55-33056f1c34d7",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "8fd1294c-b619-46a5-b19a-e181648fc072",
+        "title": "node接口测试",
+        "fullFile": "/Users/yuanzhijia/Desktop/mywebdream.nodetest/trunk/tests/service/router.spec.js",
+        "file": "/tests/service/router.spec.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook: must be on home page",
+            "fullTitle": "node接口测试 \"before all\" hook: must be on home page",
+            "timedOut": false,
+            "duration": 45,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "requestProxy.get('/')\n    .expect(200, done);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "9bafbfb0-6b94-4b52-9be0-c91356ed9589",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "test 接口测试",
+            "fullTitle": "node接口测试 test 接口测试",
+            "timedOut": false,
+            "duration": 7,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "requestProxy\n    .get('/')\n    .expect('Content-Type', /json/)\n    .expect(200)\n    .end(function (err, res) {\n        if (err) return done(err);\n        if (res.body.data == \"Hello Worlxxxxd!\") {\n            done();\n        } else {\n            done(new Error(\"接口数据异常\"));\n        }\n    });",
+            "err": {
+              "message": "Error: 接口数据异常",
+              "estack": "Error: 接口数据异常\n    at Test.<anonymous> (tests/service/router.spec.js:23:26)\n    at Test.assert (node_modules/supertest/lib/test.js:181:6)\n    at localAssert (node_modules/supertest/lib/test.js:131:12)\n    at /Users/yuanzhijia/Desktop/mywebdream.nodetest/trunk/node_modules/supertest/lib/test.js:128:5\n    at Test.Request.callback (node_modules/superagent/lib/node/index.js:716:12)\n    at parser (node_modules/superagent/lib/node/index.js:916:18)\n    at IncomingMessage.res.on (node_modules/superagent/lib/node/parsers/json.js:19:7)\n    at endReadableNT (_stream_readable.js:1064:12)"
+            },
+            "isRoot": false,
+            "uuid": "9789efd9-839a-456d-b78f-33f5dbe248a8",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "9789efd9-839a-456d-b78f-33f5dbe248a8"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 7,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
